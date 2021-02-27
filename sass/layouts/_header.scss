@@ -10,11 +10,10 @@
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   position: relative;
-  backface-visibility: hidden;
 
   &__text-box {
     position: absolute;
-    top: 42%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
