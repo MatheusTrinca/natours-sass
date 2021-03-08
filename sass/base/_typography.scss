@@ -3,29 +3,36 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: $color-grey-dark;
-  padding: 30px;
 }
 
 .heading-primary {
   text-transform: uppercase;
   color: $color-white;
   backface-visibility: hidden;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 
   &--main {
     display: block;
-    font-size: 60px;
-    letter-spacing: 35px;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
     font-weight: 400;
     animation: moveInLeft 1s ease;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+    }
   }
 
   &--sub {
     display: block;
-    font-size: 20px;
-    letter-spacing: 17.4px;
+    font-size: 2rem;
+    letter-spacing: 1.74rem;
     font-weight: 400;
     animation: moveInRight 1s ease;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -44,6 +51,14 @@ body {
   -webkit-text-fill-color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
